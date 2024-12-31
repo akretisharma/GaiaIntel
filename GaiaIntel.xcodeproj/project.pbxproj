@@ -14,6 +14,10 @@
 		885CDAFC2D227E870005A5B0 /* GaiaIntelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885CDAFB2D227E870005A5B0 /* GaiaIntelTests.swift */; };
 		885CDB062D227E870005A5B0 /* GaiaIntelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885CDB052D227E870005A5B0 /* GaiaIntelUITests.swift */; };
 		885CDB082D227E870005A5B0 /* GaiaIntelUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885CDB072D227E870005A5B0 /* GaiaIntelUITestsLaunchTests.swift */; };
+		885CDB172D2359EA0005A5B0 /* PositiveEffectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885CDB162D2359EA0005A5B0 /* PositiveEffectsView.swift */; };
+		885CDB192D2359F90005A5B0 /* NegativeEffectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885CDB182D2359F90005A5B0 /* NegativeEffectsView.swift */; };
+		885CDB1B2D235C090005A5B0 /* PositiveQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885CDB1A2D235C090005A5B0 /* PositiveQuizView.swift */; };
+		885CDB1D2D235C180005A5B0 /* NegativeQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885CDB1C2D235C180005A5B0 /* NegativeQuizView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		885CDB012D227E870005A5B0 /* GaiaIntelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GaiaIntelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		885CDB052D227E870005A5B0 /* GaiaIntelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaiaIntelUITests.swift; sourceTree = "<group>"; };
 		885CDB072D227E870005A5B0 /* GaiaIntelUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaiaIntelUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		885CDB162D2359EA0005A5B0 /* PositiveEffectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveEffectsView.swift; sourceTree = "<group>"; };
+		885CDB182D2359F90005A5B0 /* NegativeEffectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativeEffectsView.swift; sourceTree = "<group>"; };
+		885CDB1A2D235C090005A5B0 /* PositiveQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveQuizView.swift; sourceTree = "<group>"; };
+		885CDB1C2D235C180005A5B0 /* NegativeQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativeQuizView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,10 @@
 			children = (
 				885CDAEA2D227E850005A5B0 /* GaiaIntelApp.swift */,
 				885CDAEC2D227E850005A5B0 /* ContentView.swift */,
+				885CDB162D2359EA0005A5B0 /* PositiveEffectsView.swift */,
+				885CDB1A2D235C090005A5B0 /* PositiveQuizView.swift */,
+				885CDB182D2359F90005A5B0 /* NegativeEffectsView.swift */,
+				885CDB1C2D235C180005A5B0 /* NegativeQuizView.swift */,
 				885CDAEE2D227E870005A5B0 /* Assets.xcassets */,
 				885CDAF02D227E870005A5B0 /* Preview Content */,
 			);
@@ -259,6 +271,10 @@
 			files = (
 				885CDAED2D227E850005A5B0 /* ContentView.swift in Sources */,
 				885CDAEB2D227E850005A5B0 /* GaiaIntelApp.swift in Sources */,
+				885CDB192D2359F90005A5B0 /* NegativeEffectsView.swift in Sources */,
+				885CDB172D2359EA0005A5B0 /* PositiveEffectsView.swift in Sources */,
+				885CDB1D2D235C180005A5B0 /* NegativeQuizView.swift in Sources */,
+				885CDB1B2D235C090005A5B0 /* PositiveQuizView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

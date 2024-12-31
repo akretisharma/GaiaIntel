@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct PositiveEffectsView: View {
+    @Binding var quizScore: Double
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            VStack(alignment: .leading, spacing: 15) {
+                Text("AI optimizes energy usage in buildings and homes.\n\rAI helps predict natural disasters and enables better planning.\n\rAI monitors and reduces deforestation with satellite imagery.\n\rAI improves the efficiency of renewable energy grids.")
+                
+                Spacer()
+                
+                NavigationLink("Take Quiz", destination: PositiveQuizView(quizScore: $quizScore))
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.green.opacity(0.1))
+                    .cornerRadius(10)
+            }
+            .padding()
+        }
+        .navigationTitle("Positive Effects of AI")
     }
 }
 
 #Preview {
-    PositiveEffectsView()
+    PositiveEffectsView(quizScore: .constant(0.0))
 }
