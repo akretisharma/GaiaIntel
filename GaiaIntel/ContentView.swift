@@ -15,27 +15,28 @@ struct ContentView: View {
         "Some AI systems consume as much energy as 5 cars running for a year.",
         "AI is used to monitor deforestation and illegal logging in real-time."
     ]
+    @State private var selectedTab = 1
     
     @State private var currentFactIndex: Int = 0 // Tracks the index of the current fact
     
     struct ToDoItem: Identifiable {
-            var id = UUID()
-            var name: String
-            var isChecked: Bool
-        }
+        var id = UUID()
+        var name: String
+        var isChecked: Bool
+    }
     
     @State private var toDoItems = [
-           ToDoItem(name: "Plant a tree", isChecked: false),
-           ToDoItem(name: "Switch to renewable energy", isChecked: false),
-           ToDoItem(name: "Reduce meat consumption", isChecked: false)
-       ]
+        ToDoItem(name: "Plant a tree", isChecked: false),
+        ToDoItem(name: "Switch to renewable energy", isChecked: false),
+        ToDoItem(name: "Reduce meat consumption", isChecked: false)
+    ]
     
     @State private var positiveQuizScore: Double = 0.0 // Tracks Positive Quiz progress
     @State private var negativeQuizScore: Double = 0.0 // Tracks Negative Quiz progress
     
     
     var body: some View {
-        TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
+        TabView(selection: $selectedTab) {
             NavigationStack() {
                 
                 VStack {
@@ -70,6 +71,14 @@ struct ContentView: View {
                         .cornerRadius(10)
                         .padding(.horizontal)
                     
+                    Text("Recent")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.bottom, 10)
+                        .padding(.top, 20)
+                        .padding(.leading, 20)
+                    
                     Spacer()
                 }
                 
@@ -78,7 +87,7 @@ struct ContentView: View {
             .tabItem {
                 Text("Home view")
                 Image(systemName: "house.fill")}
-            .tag(0)
+            .tag(1)
             
             NavigationStack() {
                 
@@ -119,7 +128,7 @@ struct ContentView: View {
             }
             .tabItem {
                 Label("Learn", systemImage: "lightbulb.fill")}
-            .tag(1)
+            .tag(2)
             
             NavigationStack() {
                 VStack {
@@ -127,19 +136,20 @@ struct ContentView: View {
                         .font(.headline)
                         .padding(.bottom, 10)
                     
-                    List {ForEach($toDoItems, id: \.name) { $item in
-                        HStack {
-                            Button(action: {
-                                item.isChecked.toggle() // Toggle the checkbox status
-                            }) {
-                                Image(systemName: item.isChecked ? "checkmark.circle.fill" : "circle")
-                                    .foregroundColor(item.isChecked ? .green : .gray)
+                    List {
+                        ForEach($toDoItems, id: \.name) { $item in
+                            HStack {
+                                Button(action: {
+                                    item.isChecked.toggle() // Toggle the checkbox status
+                                }) {
+                                    Image(systemName: item.isChecked ? "checkmark.circle.fill" : "circle")
+                                        .foregroundColor(item.isChecked ? .green : .gray)
+                                }
+                                Text(item.name)
+                                    .strikethrough(item.isChecked, color: .gray)
                             }
-                            Text(item.name)
-                                .strikethrough(item.isChecked, color: .gray)
                         }
-                    }
-
+                        
                     }
                     
                     Spacer()
@@ -151,7 +161,7 @@ struct ContentView: View {
             }
             .tabItem {
                 Label("Take Action", systemImage: "leaf.fill")}
-            .tag(2)
+            .tag(3)
             .badge(toDoItems.filter { !$0.isChecked }.count)
         }
         .tint(.green)
