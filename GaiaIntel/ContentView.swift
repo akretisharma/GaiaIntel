@@ -6,8 +6,19 @@
 //
 
 import SwiftUI
+import Charts
 
 struct ContentView: View {
+    
+    var taskCompletion: [(name: String, count: Int)] {
+        let remaining = toDoItems.filter { !$0.isChecked }.count
+        let completed = toDoItems.count - remaining
+        return [
+            (name: "Completed Tasks", count: completed),
+            (name: "Remaining Tasks", count: remaining)
+        ]
+    }
+    
     let facts = [
         "AI can optimize energy consumption in smart homes.",
         "Data centers used for AI training account for 1% of global electricity usage.",
@@ -31,6 +42,21 @@ struct ContentView: View {
         ToDoItem(name: "Reduce meat consumption", isChecked: false)
     ]
     
+    struct Article: Identifiable {
+        var id = UUID()
+        var name: String
+        var author: String
+        var image: String
+        var desc: String
+        var link: String
+    }
+    
+    @State private var articles = [
+        Article(name: "Explainer: How AI helps combat climate change", author: "UN News", image: "article1img", desc: "AI can revolutionize the world's approach to carbon neutrality...", link: "https://news.un.org/en/story/2023/11/1143187"),
+        Article(name: "Can We Mitigate AI’s Environmental Impacts?", author: "Yale School of the Environment", image: "article2img", desc: "AI can enhance energy efficiency and reduce energy...", link: "https://environment.yale.edu/news/article/can-we-mitigate-ais-environmental-impacts"),
+        Article(name: "Generative AI's Impact On Climate Change: Benefits And Costs", author: "Forbes", image: "article3img", desc: "Researchers are using genAI to design more sustainable materials, reducing...", link: "https://www.forbes.com/sites/corneliawalther/2024/11/12/generative-ais-impact-on-climate-change-benefits-and-costs/")
+    ]
+    
     @State private var positiveQuizScore: Double = 0.0 // Tracks Positive Quiz progress
     @State private var negativeQuizScore: Double = 0.0 // Tracks Negative Quiz progress
     
@@ -38,7 +64,7 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $selectedTab) {
             NavigationStack() {
-                
+                ScrollView{
                 VStack {
                     HStack {
                         Text("Fact Generator")
@@ -71,13 +97,56 @@ struct ContentView: View {
                         .cornerRadius(10)
                         .padding(.horizontal)
                     
-                    Text("Recent")
+                    Text("Recent Activity")
                         .font(.title)
                         .fontWeight(.bold)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.bottom, 10)
                         .padding(.top, 20)
                         .padding(.leading, 20)
+                    
+                    VStack (alignment: .center) {
+                        Chart {
+                            ForEach(taskCompletion, id: \.name) {taskCount in
+                                SectorMark(
+                                    angle: .value("Cup", taskCount.count),
+                                    innerRadius: .ratio(0.6),
+                                    angularInset: 2
+                                )
+                                .cornerRadius(5)
+                                .foregroundStyle(
+                                    taskCount.name == "Completed Tasks" ? Color.green : Color.brown
+                                )
+                            }
+                        }
+                        .frame(height: 300)
+                        .chartLegend(alignment: .center, spacing: 16)
+                        .chartBackground { chartProxy in
+                            GeometryReader { geometry in
+                                if let anchor = chartProxy.plotFrame {
+                                    let frame = geometry[anchor]
+                                    Text("Actions \nTaken")
+                                        .fontWeight(.bold)
+                                        .position(x: frame.midX, y: frame.midY)
+                                        .font(.title2)
+                                        .multilineTextAlignment(.center)
+                                }
+                            }
+                        }
+                        
+                        HStack {
+                            Label("Remaining Tasks", systemImage: "circle.fill")
+                                .font(.footnote)
+                                .foregroundColor(.brown)
+                            
+                            Label("Completed Tasks", systemImage: "circle.fill")
+                                .font(.footnote)
+                                .foregroundColor(.green)
+                        }
+                        .padding(.top, 10)
+                        
+                    }
+                }
                     
                     Spacer()
                 }
@@ -89,42 +158,91 @@ struct ContentView: View {
                 Image(systemName: "house.fill")}
             .tag(1)
             
+            
             NavigationStack() {
-                
-                VStack(spacing: 20) {
-                    
-                    NavigationLink(destination: PositiveEffectsView(quizScore: $positiveQuizScore)) {
-                        VStack(alignment: .leading) {
-                            Text("Positive Effects of AI")
-                                .font(.title2)
-                                .fontWeight(.bold)
-                            ProgressView(value: positiveQuizScore, total: 1.0)
-                                .progressViewStyle(LinearProgressViewStyle(tint: .green))
+                ScrollView{
+                    VStack{
+                        VStack(spacing: 20) {
+                            
+                            NavigationLink(destination: PositiveEffectsView(quizScore: $positiveQuizScore)) {
+                                VStack(alignment: .leading) {
+                                    Text("Positive Effects of AI")
+                                        .font(.title2)
+                                        .fontWeight(.bold)
+                                    ProgressView(value: positiveQuizScore, total: 1.0)
+                                        .progressViewStyle(LinearProgressViewStyle(tint: .green))
+                                        .padding(.top, 20)
+                                }
+                                .padding()
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .background(Color.green.opacity(0.1))
+                                .cornerRadius(10)
+                            }
+                            
+                            NavigationLink(destination: NegativeEffectsView(quizScore: $negativeQuizScore)) {
+                                VStack(alignment: .leading) {
+                                    Text("Negative Effects of AI")
+                                        .font(.title2)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.red)
+                                    ProgressView(value: negativeQuizScore, total: 1.0)
+                                        .progressViewStyle(LinearProgressViewStyle(tint: .red))
+                                        .padding(.top, 20)
+                                }
+                                .padding()
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .background(Color.red.opacity(0.1))
+                                .cornerRadius(10)
+                            }
+                            
                         }
                         .padding()
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .background(Color.green.opacity(0.1))
-                        .cornerRadius(10)
-                    }
-                    
-                    NavigationLink(destination: NegativeEffectsView(quizScore: $negativeQuizScore)) {
-                        VStack(alignment: .leading) {
-                            Text("Negative Effects of AI")
-                                .font(.title2)
-                                .fontWeight(.bold)
-                            ProgressView(value: negativeQuizScore, total: 1.0)
-                                .progressViewStyle(LinearProgressViewStyle(tint: .red))
+                        .navigationTitle("Learn")
+                        
+                        Text("Related Articles")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.bottom, 10)
+                            .padding(.top, 20)
+                            .padding(.leading, 20)
+                        
+                        VStack(spacing: 20){
+                            ForEach($articles, id: \.id) { $item in
+                                HStack {
+                                    VStack (alignment: .leading){
+                                        Link(item.name, destination: URL(string: item.link)!) {
+                                            Text(item.name)
+                                                .font(.headline)
+                                                .fontWeight(.bold)
+                                                .foregroundColor(.green)
+                                                .multilineTextAlignment(.leading)}
+                                        Text(item.author)
+                                            .font(.footnote)
+                                            .italic()
+                                            .multilineTextAlignment(.leading)
+                                        Text(item.desc)
+                                            .font(.callout)
+                                    }
+                                    Spacer()
+                                    Image(item.image)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 90, height: 90, alignment: .center)
+                                        .border(.green, width: 2)
+                                        .cornerRadius(10)
+                                        .clipped()
+                                }
+                                .padding()
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .background(Color.green.opacity(0.1))
+                                .cornerRadius(10)
+                                .padding(.horizontal)
+                            }
+                            
                         }
-                        .padding()
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .background(Color.red.opacity(0.1))
-                        .cornerRadius(10)
                     }
-                    
-                    Spacer()
                 }
-                .padding()
-                .navigationTitle("Learn")
             }
             .tabItem {
                 Label("Learn", systemImage: "lightbulb.fill")}
@@ -143,10 +261,10 @@ struct ContentView: View {
                                     item.isChecked.toggle() // Toggle the checkbox status
                                 }) {
                                     Image(systemName: item.isChecked ? "checkmark.circle.fill" : "circle")
-                                        .foregroundColor(item.isChecked ? .green : .gray)
+                                        .foregroundColor(item.isChecked ? .green : .brown)
                                 }
                                 Text(item.name)
-                                    .strikethrough(item.isChecked, color: .gray)
+                                    .strikethrough(item.isChecked, color: .brown)
                             }
                         }
                         
@@ -168,8 +286,8 @@ struct ContentView: View {
         .onAppear(perform: {
             
             UITabBar.appearance().unselectedItemTintColor = .systemBrown
+            UITabBar.appearance().backgroundColor = .systemBrown.withAlphaComponent(0.2)
             
-            UITabBar.appearance().backgroundColor = .systemGray4.withAlphaComponent(0.4)
             
         })
         
