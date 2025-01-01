@@ -25,18 +25,35 @@ struct ContentView: View {
     @State private var currentFactIndex: Int = 0
     
     //Variables for Take Action page
-    struct ToDoItem: Identifiable {
+    struct ToDoItem: Identifiable, Codable {
         var id = UUID()
         var name: String
         var isChecked: Bool
     }
     
     @State private var toDoItems = [
-        ToDoItem(name: "Plant a tree", isChecked: false),
-        ToDoItem(name: "Switch to renewable energy", isChecked: false),
-        ToDoItem(name: "Reduce meat consumption", isChecked: false)
+        ToDoItem(name: "Plant a tree in your community.", isChecked: false),
+        ToDoItem(name: "Switch to reusable shopping bags.", isChecked: false),
+        ToDoItem(name: "Reduce water usage by fixing leaks and turning off taps.", isChecked: false),
+        ToDoItem(name: "Turn off lights when not in use.", isChecked: false),
+        ToDoItem(name: "Carpool or use public transportation.", isChecked: false),
+        ToDoItem(name: "Start composting at home.", isChecked: false),
+        ToDoItem(name: "Recycle old electronics responsibly.", isChecked: false),
+        ToDoItem(name: "Install energy-efficient light bulbs.", isChecked: false),
+        ToDoItem(name: "Use a reusable water bottle.", isChecked: false),
+        ToDoItem(name: "Shop locally and support small businesses.", isChecked: false),
+        ToDoItem(name: "Reduce single-use plastics, like straws and utensils.", isChecked: false),
+        ToDoItem(name: "Unplug electronics when not in use to save energy.", isChecked: false),
+        ToDoItem(name: "Participate in a community clean-up event.", isChecked: false),
+        ToDoItem(name: "Switch to a vegetarian meal once a week.", isChecked: false),
+        ToDoItem(name: "Donate old clothes instead of throwing them away.", isChecked: false),
+        ToDoItem(name: "Advocate for green policies in your local government.", isChecked: false),
+        ToDoItem(name: "Support companies that prioritize sustainability.", isChecked: false),
+        ToDoItem(name: "Use a clothesline instead of a dryer.", isChecked: false),
+        ToDoItem(name: "Educate yourself and others about climate change.", isChecked: false),
+        ToDoItem(name: "Volunteer with an environmental organization.", isChecked: false)
     ]
-    
+        
     var taskCompletion: [(name: String, count: Int)] {
         let remaining = toDoItems.filter { !$0.isChecked }.count
         let completed = toDoItems.count - remaining
@@ -46,9 +63,54 @@ struct ContentView: View {
         ]
     }
     
+    private func saveToDoItems() {
+        do {
+            let encoder = JSONEncoder()
+            let data = try encoder.encode(toDoItems)
+            UserDefaults.standard.set(data, forKey: "toDoItems")
+        } catch {
+            print("Failed to save to-do items: \(error)")
+        }
+    }
+
+    private func loadToDoItems() {
+        if let data = UserDefaults.standard.data(forKey: "toDoItems") {
+            do {
+                let decoder = JSONDecoder()
+                toDoItems = try decoder.decode([ToDoItem].self, from: data)
+            } catch {
+                print("Failed to load to-do items: \(error)")
+            }
+        }
+    }
+
+    
     //Variables for Learn page
+    
+    let positiveEffects = [
+        "AI optimizes energy usage in buildings and homes.",
+        "AI helps predict natural disasters and enables better planning.",
+        "AI monitors and reduces deforestation with satellite imagery."
+    ]
+    
+    let negativeEffects = [
+        "Training large AI models consumes significant energy.",
+        "AI technologies often rely on rare earth materials, which are hard to mine sustainably.",
+        "Increased reliance on AI can sometimes lead to energy inefficiencies."
+    ]
+    
     @State private var positiveQuizScore: Double = 0.0 // Tracks Positive Quiz progress
     @State private var negativeQuizScore: Double = 0.0 // Tracks Negative Quiz progress
+    
+    func saveQuizScores() {
+        UserDefaults.standard.set(positiveQuizScore, forKey: "PositiveQuizScore")
+        UserDefaults.standard.set(negativeQuizScore, forKey: "NegativeQuizScore")
+    }
+
+    func loadQuizScores() {
+        positiveQuizScore = UserDefaults.standard.double(forKey: "PositiveQuizScore")
+        negativeQuizScore = UserDefaults.standard.double(forKey: "NegativeQuizScore")
+    }
     
     struct Article: Identifiable {
         var id = UUID()
@@ -62,16 +124,38 @@ struct ContentView: View {
     @State private var articles = [
         Article(name: "Explainer: How AI helps combat climate change", author: "UN News", image: "article1img", desc: "AI can revolutionize the world's approach to carbon neutrality...", link: "https://news.un.org/en/story/2023/11/1143187"),
         Article(name: "Can We Mitigate AI’s Environmental Impacts?", author: "Yale School of the Environment", image: "article2img", desc: "AI can enhance energy efficiency and reduce energy...", link: "https://environment.yale.edu/news/article/can-we-mitigate-ais-environmental-impacts"),
-        Article(name: "Generative AI's Impact On Climate Change: Benefits And Costs", author: "Forbes", image: "article3img", desc: "Researchers are using genAI to design more sustainable...", link: "https://www.forbes.com/sites/corneliawalther/2024/11/12/generative-ais-impact-on-climate-change-benefits-and-costs/")
+        Article(name: "Generative AI's Impact On Climate Change: Benefits...", author: "Forbes", image: "article3img", desc: "Researchers are using genAI to design more sustainable...", link: "https://www.forbes.com/sites/corneliawalther/2024/11/12/generative-ais-impact-on-climate-change-benefits-and-costs/")
     ]
     
-    private func articleLinkView(name: String, link: String) -> some View {
+    private func articleLinkView(name: String, link: String, author: String, desc: String, image: String) -> some View {
         Link(destination: URL(string: link) ?? URL(string: "https://example.com")!) {
-            Text(name)
-                .font(.headline)
-                .fontWeight(.bold)
-                .foregroundColor(.green)
-                .multilineTextAlignment(.leading)
+            VStack(alignment: .leading) {
+                Text(name)
+                    .font(.headline)
+                    .fontWeight(.bold)
+                    .foregroundColor(.green)
+                    .multilineTextAlignment(.leading)
+                Text(author)
+                    .font(.footnote)
+                    .italic()
+                    .multilineTextAlignment(.leading)
+                    .foregroundColor(.black)
+                Text(desc)
+                    .font(.callout)
+                    .multilineTextAlignment(.leading)
+                    .foregroundColor(.black)
+            }
+            Spacer()
+            Image(image)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 90, height: 90, alignment: .center)
+                .border(.green, width: 2)
+                .cornerRadius(10)
+                .clipped()
+            
+        
+            
         }
         
         
@@ -228,23 +312,7 @@ struct ContentView: View {
                         VStack(spacing: 20){
                             ForEach($articles, id: \.id) { $item in
                                 HStack {
-                                    VStack(alignment: .leading) {
-                                        articleLinkView(name: item.name, link: item.link)
-                                        Text(item.author)
-                                            .font(.footnote)
-                                            .italic()
-                                            .multilineTextAlignment(.leading)
-                                        Text(item.desc)
-                                            .font(.callout)
-                                    }
-                                    Spacer()
-                                    Image(item.image)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: 90, height: 90, alignment: .center)
-                                        .border(.green, width: 2)
-                                        .cornerRadius(10)
-                                        .clipped()
+                                    articleLinkView(name: item.name, link: item.link, author: item.author, desc: item.desc, image: item.image)
                                 }
                                 .padding()
                                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -272,6 +340,7 @@ struct ContentView: View {
                             HStack {
                                 Button(action: {
                                     item.isChecked.toggle() // Toggle the checkbox status
+                                    saveToDoItems() // Save updated data
                                 }) {
                                     Image(systemName: item.isChecked ? "checkmark.circle.fill" : "circle")
                                         .foregroundColor(item.isChecked ? .green : .brown)
@@ -301,27 +370,19 @@ struct ContentView: View {
             UITabBar.appearance().unselectedItemTintColor = .systemBrown
             UITabBar.appearance().backgroundColor = .systemBrown.withAlphaComponent(0.2)
             
+            loadToDoItems()
+            loadQuizScores()
             
         })
-        
-        
-        
+        .onChange(of: positiveQuizScore) {
+                saveQuizScores() // Save positive quiz score whenever it changes
+            }
+        .onChange(of: negativeQuizScore) {
+                saveQuizScores() // Save negative quiz score whenever it changes
+            }
     }
-    
-    let positiveEffects = [
-        "AI optimizes energy usage in buildings and homes.",
-        "AI helps predict natural disasters and enables better planning.",
-        "AI monitors and reduces deforestation with satellite imagery."
-    ]
-    
-    let negativeEffects = [
-        "Training large AI models consumes significant energy.",
-        "AI technologies often rely on rare earth materials, which are hard to mine sustainably.",
-        "Increased reliance on AI can sometimes lead to energy inefficiencies."
-    ]
-    
-}
 
+}
 
 #Preview {
     ContentView()
