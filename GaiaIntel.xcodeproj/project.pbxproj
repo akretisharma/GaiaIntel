@@ -38,14 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		885CDAE72D227E850005A5B0 /* GaiaIntel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GaiaIntel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		885CDAE72D227E850005A5B0 /* gaiaintel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gaiaintel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		885CDAEA2D227E850005A5B0 /* GaiaIntelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaiaIntelApp.swift; sourceTree = "<group>"; };
 		885CDAEC2D227E850005A5B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		885CDAEE2D227E870005A5B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		885CDAF12D227E870005A5B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		885CDAF72D227E870005A5B0 /* GaiaIntelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GaiaIntelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		885CDAF72D227E870005A5B0 /* gaiaintelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gaiaintelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		885CDAFB2D227E870005A5B0 /* GaiaIntelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaiaIntelTests.swift; sourceTree = "<group>"; };
-		885CDB012D227E870005A5B0 /* GaiaIntelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GaiaIntelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		885CDB012D227E870005A5B0 /* gaiaintelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gaiaintelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		885CDB052D227E870005A5B0 /* GaiaIntelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaiaIntelUITests.swift; sourceTree = "<group>"; };
 		885CDB072D227E870005A5B0 /* GaiaIntelUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaiaIntelUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		885CDB162D2359EA0005A5B0 /* PositiveEffectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveEffectsView.swift; sourceTree = "<group>"; };
@@ -92,9 +92,9 @@
 		885CDAE82D227E850005A5B0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				885CDAE72D227E850005A5B0 /* GaiaIntel.app */,
-				885CDAF72D227E870005A5B0 /* GaiaIntelTests.xctest */,
-				885CDB012D227E870005A5B0 /* GaiaIntelUITests.xctest */,
+				885CDAE72D227E850005A5B0 /* gaiaintel.app */,
+				885CDAF72D227E870005A5B0 /* gaiaintelTests.xctest */,
+				885CDB012D227E870005A5B0 /* gaiaintelUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,9 +142,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		885CDAE62D227E850005A5B0 /* GaiaIntel */ = {
+		885CDAE62D227E850005A5B0 /* gaiaintel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 885CDB0B2D227E870005A5B0 /* Build configuration list for PBXNativeTarget "GaiaIntel" */;
+			buildConfigurationList = 885CDB0B2D227E870005A5B0 /* Build configuration list for PBXNativeTarget "gaiaintel" */;
 			buildPhases = (
 				885CDAE32D227E850005A5B0 /* Sources */,
 				885CDAE42D227E850005A5B0 /* Frameworks */,
@@ -154,14 +154,14 @@
 			);
 			dependencies = (
 			);
-			name = GaiaIntel;
+			name = gaiaintel;
 			productName = GaiaIntel;
-			productReference = 885CDAE72D227E850005A5B0 /* GaiaIntel.app */;
+			productReference = 885CDAE72D227E850005A5B0 /* gaiaintel.app */;
 			productType = "com.apple.product-type.application";
 		};
-		885CDAF62D227E870005A5B0 /* GaiaIntelTests */ = {
+		885CDAF62D227E870005A5B0 /* gaiaintelTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 885CDB0E2D227E870005A5B0 /* Build configuration list for PBXNativeTarget "GaiaIntelTests" */;
+			buildConfigurationList = 885CDB0E2D227E870005A5B0 /* Build configuration list for PBXNativeTarget "gaiaintelTests" */;
 			buildPhases = (
 				885CDAF32D227E870005A5B0 /* Sources */,
 				885CDAF42D227E870005A5B0 /* Frameworks */,
@@ -172,14 +172,14 @@
 			dependencies = (
 				885CDAF92D227E870005A5B0 /* PBXTargetDependency */,
 			);
-			name = GaiaIntelTests;
+			name = gaiaintelTests;
 			productName = GaiaIntelTests;
-			productReference = 885CDAF72D227E870005A5B0 /* GaiaIntelTests.xctest */;
+			productReference = 885CDAF72D227E870005A5B0 /* gaiaintelTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		885CDB002D227E870005A5B0 /* GaiaIntelUITests */ = {
+		885CDB002D227E870005A5B0 /* gaiaintelUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 885CDB112D227E870005A5B0 /* Build configuration list for PBXNativeTarget "GaiaIntelUITests" */;
+			buildConfigurationList = 885CDB112D227E870005A5B0 /* Build configuration list for PBXNativeTarget "gaiaintelUITests" */;
 			buildPhases = (
 				885CDAFD2D227E870005A5B0 /* Sources */,
 				885CDAFE2D227E870005A5B0 /* Frameworks */,
@@ -190,9 +190,9 @@
 			dependencies = (
 				885CDB032D227E870005A5B0 /* PBXTargetDependency */,
 			);
-			name = GaiaIntelUITests;
+			name = gaiaintelUITests;
 			productName = GaiaIntelUITests;
-			productReference = 885CDB012D227E870005A5B0 /* GaiaIntelUITests.xctest */;
+			productReference = 885CDB012D227E870005A5B0 /* gaiaintelUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -218,7 +218,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 885CDAE22D227E850005A5B0 /* Build configuration list for PBXProject "GaiaIntel" */;
+			buildConfigurationList = 885CDAE22D227E850005A5B0 /* Build configuration list for PBXProject "gaiaintel" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -231,9 +231,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				885CDAE62D227E850005A5B0 /* GaiaIntel */,
-				885CDAF62D227E870005A5B0 /* GaiaIntelTests */,
-				885CDB002D227E870005A5B0 /* GaiaIntelUITests */,
+				885CDAE62D227E850005A5B0 /* gaiaintel */,
+				885CDAF62D227E870005A5B0 /* gaiaintelTests */,
+				885CDB002D227E870005A5B0 /* gaiaintelUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -300,12 +300,12 @@
 /* Begin PBXTargetDependency section */
 		885CDAF92D227E870005A5B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 885CDAE62D227E850005A5B0 /* GaiaIntel */;
+			target = 885CDAE62D227E850005A5B0 /* gaiaintel */;
 			targetProxy = 885CDAF82D227E870005A5B0 /* PBXContainerItemProxy */;
 		};
 		885CDB032D227E870005A5B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 885CDAE62D227E850005A5B0 /* GaiaIntel */;
+			target = 885CDAE62D227E850005A5B0 /* gaiaintel */;
 			targetProxy = 885CDB022D227E870005A5B0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -501,7 +501,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GaiaIntel.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GaiaIntel";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gaiaintel.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/gaiaintel";
 			};
 			name = Debug;
 		};
@@ -520,7 +520,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GaiaIntel.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GaiaIntel";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gaiaintel.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/gaiaintel";
 			};
 			name = Release;
 		};
@@ -561,7 +561,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		885CDAE22D227E850005A5B0 /* Build configuration list for PBXProject "GaiaIntel" */ = {
+		885CDAE22D227E850005A5B0 /* Build configuration list for PBXProject "gaiaintel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				885CDB092D227E870005A5B0 /* Debug */,
@@ -570,7 +570,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		885CDB0B2D227E870005A5B0 /* Build configuration list for PBXNativeTarget "GaiaIntel" */ = {
+		885CDB0B2D227E870005A5B0 /* Build configuration list for PBXNativeTarget "gaiaintel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				885CDB0C2D227E870005A5B0 /* Debug */,
@@ -579,7 +579,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		885CDB0E2D227E870005A5B0 /* Build configuration list for PBXNativeTarget "GaiaIntelTests" */ = {
+		885CDB0E2D227E870005A5B0 /* Build configuration list for PBXNativeTarget "gaiaintelTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				885CDB0F2D227E870005A5B0 /* Debug */,
@@ -588,7 +588,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		885CDB112D227E870005A5B0 /* Build configuration list for PBXNativeTarget "GaiaIntelUITests" */ = {
+		885CDB112D227E870005A5B0 /* Build configuration list for PBXNativeTarget "gaiaintelUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				885CDB122D227E870005A5B0 /* Debug */,
