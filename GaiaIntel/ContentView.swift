@@ -78,6 +78,7 @@ struct ContentView: View {
             do {
                 let decoder = JSONDecoder()
                 toDoItems = try decoder.decode([ToDoItem].self, from: data)
+                UserDefaults.standard.removeObject(forKey: "toDoItems")
             } catch {
                 print("Failed to load to-do items: \(error)")
             }
@@ -332,25 +333,40 @@ struct ContentView: View {
             NavigationStack() {
                 VStack {
                     Text("Things You Can Do")
-                        .font(.headline)
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.bottom, 10)
+                        .padding(.top, 10)
                     
                     List {
-                        ForEach($toDoItems, id: \.name) { $item in
-                            HStack {
-                                Button(action: {
-                                    item.isChecked.toggle() // Toggle the checkbox status
-                                    saveToDoItems() // Save updated data
-                                }) {
-                                    Image(systemName: item.isChecked ? "checkmark.circle.fill" : "circle")
-                                        .foregroundColor(item.isChecked ? .green : .brown)
+                        Section {
+                            ForEach(toDoItems) { item in
+                                HStack {
+                                    Button(action: {
+                                        if let index = toDoItems.firstIndex(where: { $0.id == item.id }) {
+                                            toDoItems[index].isChecked.toggle() // Toggle the checkbox status
+                                            saveToDoItems() // Save updated data
+                                        }
+                                    }) {
+                                        Image(systemName: item.isChecked ? "checkmark.circle.fill" : "circle")
+                                            .foregroundColor(item.isChecked ? .green : .brown)
+                                    }
+                                    Text(item.name)
+                                        .strikethrough(item.isChecked, color: .brown)
                                 }
-                                Text(item.name)
-                                    .strikethrough(item.isChecked, color: .brown)
+                                .padding(.vertical, 5)
+                                
                             }
                         }
+                        .listSectionSeparatorTint(.white)
+                        
                         
                     }
+                    .listStyle(PlainListStyle())
+                    .scrollContentBackground(.hidden)
+                    
+                    
                     
                     Spacer()
                 }
