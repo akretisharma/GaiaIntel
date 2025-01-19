@@ -1,6 +1,6 @@
 # GaiaIntel
 
-GaiaIntel is a mobile application designed to educate users about the role of Artificial Intelligence (AI) in combating climate change, while promoting sustainability and eco-friendly actions. The app provides users with facts, quizzes, and a to-do list for actions they can take to reduce their environmental impact.
+GaiaIntel is a mobile application designed to educate users about the role of Artificial Intelligence (AI) in combating climate change while promoting sustainability and eco-friendly actions. The app provides users with facts, quizzes, and a to-do list of actions they can take to reduce their negative environmental impact.
 
 ## Features
 
