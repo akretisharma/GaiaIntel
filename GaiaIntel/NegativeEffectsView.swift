@@ -13,7 +13,7 @@ struct NegativeEffectsView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 15) {
-                Text("Training large AI models consumes significant energy. \n\rAI technologies often rely on rare earth materials, which are hard to mine sustainably. \n\rIncreased reliance on AI can sometimes lead to energy inefficiencies. \n\rData centers used for AI are a significant contributor to carbon emissions.")
+                Text("Training large AI models consumes significant amounts of energy, making them resource-intensive and environmentally taxing. AI technologies often depend on rare earth materials, which are challenging to mine sustainably and can have negative ecological impacts. Additionally, the increased reliance on AI can sometimes lead to energy inefficiencies, particularly when systems are not optimized for sustainable use. Moreover, data centers that power AI applications are significant contributors to carbon emissions, further highlighting the environmental challenges associated with AI development and deployment.")
                 
                 Spacer()
                 

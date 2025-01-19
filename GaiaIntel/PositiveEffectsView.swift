@@ -13,7 +13,7 @@ struct PositiveEffectsView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 15) {
-                Text("AI optimizes energy usage in buildings and homes.\n\rAI helps predict natural disasters and enables better planning.\n\rAI monitors and reduces deforestation with satellite imagery.\n\rAI improves the efficiency of renewable energy grids.")
+                Text("AI plays a crucial role in promoting sustainability and addressing environmental challenges. It optimizes energy usage in buildings and homes, improving efficiency and reducing waste. AI enhances the management of renewable energy grids, ensuring their operations are more effective and reliable. Additionally, AI helps predict natural disasters, enabling better planning and response strategies to minimize their impact. It also monitors deforestation through satellite imagery, helping to detect and reduce illegal activities, and supports conservation efforts. These advancements demonstrate how AI can contribute to a more sustainable and resilient future.")
                 
                 Spacer()
                 

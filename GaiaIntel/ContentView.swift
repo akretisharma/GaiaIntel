@@ -16,10 +16,14 @@ struct ContentView: View {
     //Variables for Home page
     let facts = [
         "AI can optimize energy consumption in smart homes.",
-        "Data centers used for AI training account for 1% of global electricity usage.",
+        "Data centers used for AI training account for 2% of global electricity usage.",
         "AI helps predict extreme weather patterns to aid disaster response.",
         "Some AI systems consume as much energy as 5 cars running for a year.",
-        "AI is used to monitor deforestation and illegal logging in real-time."
+        "AI is used to monitor deforestation and illegal logging in real-time.",
+        "Training a single large AI model can emit as much carbon as five round-trip flights between New York and London.",
+        "AI helps analyze satellite imagery to track biodiversity loss and endangered species populations.",
+        "AI-assisted climate models are helping scientists simulate and understand long-term environmental changes.",
+        "AI systems enable farmers to reduce pesticide and fertilizer use by analyzing soil and crop data, leading to sustainable agriculture."
     ]
     
     @State private var currentFactIndex: Int = 0
@@ -381,6 +385,7 @@ struct ContentView: View {
             .badge(toDoItems.filter { !$0.isChecked }.count)
         }
         .tint(.green)
+        .background(Color.brown.ignoresSafeArea())
         .onAppear(perform: {
             
             UITabBar.appearance().unselectedItemTintColor = .systemBrown
