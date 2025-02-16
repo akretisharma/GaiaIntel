@@ -110,9 +110,9 @@
 				885CDB1A2D235C090005A5B0 /* PositiveQuizView.swift */,
 				885CDB182D2359F90005A5B0 /* NegativeEffectsView.swift */,
 				885CDB1C2D235C180005A5B0 /* NegativeQuizView.swift */,
+				883501CF2D629947001D1EA6 /* ChatbotView.swift */,
 				885CDAEE2D227E870005A5B0 /* Assets.xcassets */,
 				885CDAF02D227E870005A5B0 /* Preview Content */,
-				883501CF2D629947001D1EA6 /* ChatbotView.swift */,
 			);
 			path = GaiaIntel;
 			sourceTree = "<group>";

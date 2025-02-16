@@ -383,10 +383,10 @@ struct ContentView: View {
             .badge(toDoItems.filter { !$0.isChecked }.count)
             
             NavigationStack() {
-                /*TabView(selection: $selectedTab) {
+                TabView(selection: $selectedTab) {
                     ChatbotView()
                     .toolbar(.hidden, for: .tabBar)
-                }*/
+                }
             }
             
             .tabItem {
