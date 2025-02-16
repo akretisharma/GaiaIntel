@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		885CDAEB2D227E850005A5B0 /* GaiaIntelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885CDAEA2D227E850005A5B0 /* GaiaIntelApp.swift */; };
+		885CDAED2D227E850005A5B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885CDAEC2D227E850005A5B0 /* ContentView.swift */; };
+		885CDAEF2D227E870005A5B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 885CDAEE2D227E870005A5B0 /* Assets.xcassets */; };
+		885CDAF22D227E870005A5B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 885CDAF12D227E870005A5B0 /* Preview Assets.xcassets */; };
+		885CDAFC2D227E870005A5B0 /* GaiaIntelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885CDAFB2D227E870005A5B0 /* GaiaIntelTests.swift */; };
+		885CDB062D227E870005A5B0 /* GaiaIntelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885CDB052D227E870005A5B0 /* GaiaIntelUITests.swift */; };
+		885CDB082D227E870005A5B0 /* GaiaIntelUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885CDB072D227E870005A5B0 /* GaiaIntelUITestsLaunchTests.swift */; };
+		885CDB172D2359EA0005A5B0 /* PositiveEffectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885CDB162D2359EA0005A5B0 /* PositiveEffectsView.swift */; };
+		885CDB192D2359F90005A5B0 /* NegativeEffectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885CDB182D2359F90005A5B0 /* NegativeEffectsView.swift */; };
+		885CDB1B2D235C090005A5B0 /* PositiveQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885CDB1A2D235C090005A5B0 /* PositiveQuizView.swift */; };
+		885CDB1D2D235C180005A5B0 /* NegativeQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885CDB1C2D235C180005A5B0 /* NegativeQuizView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		885CDAF82D227E870005A5B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 885CDADF2D227E850005A5B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 885CDAE62D227E850005A5B0;
+			remoteInfo = GaiaIntel;
+		};
+		885CDB022D227E870005A5B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 885CDADF2D227E850005A5B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 885CDAE62D227E850005A5B0;
+			remoteInfo = GaiaIntel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		885CDAE72D227E850005A5B0 /* GaiaIntel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GaiaIntel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		885CDAEA2D227E850005A5B0 /* GaiaIntelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaiaIntelApp.swift; sourceTree = "<group>"; };
+		885CDAEC2D227E850005A5B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		885CDAEE2D227E870005A5B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		885CDAF12D227E870005A5B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		885CDAF72D227E870005A5B0 /* GaiaIntelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GaiaIntelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		885CDAFB2D227E870005A5B0 /* GaiaIntelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaiaIntelTests.swift; sourceTree = "<group>"; };
+		885CDB012D227E870005A5B0 /* GaiaIntelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GaiaIntelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		885CDB052D227E870005A5B0 /* GaiaIntelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaiaIntelUITests.swift; sourceTree = "<group>"; };
+		885CDB072D227E870005A5B0 /* GaiaIntelUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaiaIntelUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		885CDB162D2359EA0005A5B0 /* PositiveEffectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveEffectsView.swift; sourceTree = "<group>"; };
+		885CDB182D2359F90005A5B0 /* NegativeEffectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativeEffectsView.swift; sourceTree = "<group>"; };
+		885CDB1A2D235C090005A5B0 /* PositiveQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveQuizView.swift; sourceTree = "<group>"; };
+		885CDB1C2D235C180005A5B0 /* NegativeQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NegativeQuizView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		885CDAE42D227E850005A5B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		885CDAF42D227E870005A5B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		885CDAFE2D227E870005A5B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		885CDADE2D227E850005A5B0 = {
+			isa = PBXGroup;
+			children = (
+				885CDAE92D227E850005A5B0 /* GaiaIntel */,
+				885CDAFA2D227E870005A5B0 /* GaiaIntelTests */,
+				885CDB042D227E870005A5B0 /* GaiaIntelUITests */,
+				885CDAE82D227E850005A5B0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		885CDAE82D227E850005A5B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				885CDAE72D227E850005A5B0 /* GaiaIntel.app */,
+				885CDAF72D227E870005A5B0 /* GaiaIntelTests.xctest */,
+				885CDB012D227E870005A5B0 /* GaiaIntelUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		885CDAE92D227E850005A5B0 /* GaiaIntel */ = {
+			isa = PBXGroup;
+			children = (
+				885CDAEA2D227E850005A5B0 /* GaiaIntelApp.swift */,
+				885CDAEC2D227E850005A5B0 /* ContentView.swift */,
+				885CDB162D2359EA0005A5B0 /* PositiveEffectsView.swift */,
+				885CDB1A2D235C090005A5B0 /* PositiveQuizView.swift */,
+				885CDB182D2359F90005A5B0 /* NegativeEffectsView.swift */,
+				885CDB1C2D235C180005A5B0 /* NegativeQuizView.swift */,
+				885CDAEE2D227E870005A5B0 /* Assets.xcassets */,
+				885CDAF02D227E870005A5B0 /* Preview Content */,
+			);
+			path = GaiaIntel;
+			sourceTree = "<group>";
+		};
+		885CDAF02D227E870005A5B0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				885CDAF12D227E870005A5B0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		885CDAFA2D227E870005A5B0 /* GaiaIntelTests */ = {
+			isa = PBXGroup;
+			children = (
+				885CDAFB2D227E870005A5B0 /* GaiaIntelTests.swift */,
+			);
+			path = GaiaIntelTests;
+			sourceTree = "<group>";
+		};
+		885CDB042D227E870005A5B0 /* GaiaIntelUITests */ = {
+			isa = PBXGroup;
+			children = (
+				885CDB052D227E870005A5B0 /* GaiaIntelUITests.swift */,
+				885CDB072D227E870005A5B0 /* GaiaIntelUITestsLaunchTests.swift */,
+			);
+			path = GaiaIntelUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		885CDAE62D227E850005A5B0 /* GaiaIntel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 885CDB0B2D227E870005A5B0 /* Build configuration list for PBXNativeTarget "GaiaIntel" */;
+			buildPhases = (
+				885CDAE32D227E850005A5B0 /* Sources */,
+				885CDAE42D227E850005A5B0 /* Frameworks */,
+				885CDAE52D227E850005A5B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GaiaIntel;
+			productName = GaiaIntel;
+			productReference = 885CDAE72D227E850005A5B0 /* GaiaIntel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		885CDAF62D227E870005A5B0 /* GaiaIntelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 885CDB0E2D227E870005A5B0 /* Build configuration list for PBXNativeTarget "GaiaIntelTests" */;
+			buildPhases = (
+				885CDAF32D227E870005A5B0 /* Sources */,
+				885CDAF42D227E870005A5B0 /* Frameworks */,
+				885CDAF52D227E870005A5B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				885CDAF92D227E870005A5B0 /* PBXTargetDependency */,
+			);
+			name = GaiaIntelTests;
+			productName = GaiaIntelTests;
+			productReference = 885CDAF72D227E870005A5B0 /* GaiaIntelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		885CDB002D227E870005A5B0 /* GaiaIntelUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 885CDB112D227E870005A5B0 /* Build configuration list for PBXNativeTarget "GaiaIntelUITests" */;
+			buildPhases = (
+				885CDAFD2D227E870005A5B0 /* Sources */,
+				885CDAFE2D227E870005A5B0 /* Frameworks */,
+				885CDAFF2D227E870005A5B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				885CDB032D227E870005A5B0 /* PBXTargetDependency */,
+			);
+			name = GaiaIntelUITests;
+			productName = GaiaIntelUITests;
+			productReference = 885CDB012D227E870005A5B0 /* GaiaIntelUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		885CDADF2D227E850005A5B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					885CDAE62D227E850005A5B0 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					885CDAF62D227E870005A5B0 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 885CDAE62D227E850005A5B0;
+					};
+					885CDB002D227E870005A5B0 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 885CDAE62D227E850005A5B0;
+					};
+				};
+			};
+			buildConfigurationList = 885CDAE22D227E850005A5B0 /* Build configuration list for PBXProject "GaiaIntel" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 885CDADE2D227E850005A5B0;
+			productRefGroup = 885CDAE82D227E850005A5B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				885CDAE62D227E850005A5B0 /* GaiaIntel */,
+				885CDAF62D227E870005A5B0 /* GaiaIntelTests */,
+				885CDB002D227E870005A5B0 /* GaiaIntelUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		885CDAE52D227E850005A5B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				885CDAF22D227E870005A5B0 /* Preview Assets.xcassets in Resources */,
+				885CDAEF2D227E870005A5B0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		885CDAF52D227E870005A5B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		885CDAFF2D227E870005A5B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		885CDAE32D227E850005A5B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				885CDAED2D227E850005A5B0 /* ContentView.swift in Sources */,
+				885CDAEB2D227E850005A5B0 /* GaiaIntelApp.swift in Sources */,
+				885CDB192D2359F90005A5B0 /* NegativeEffectsView.swift in Sources */,
+				885CDB172D2359EA0005A5B0 /* PositiveEffectsView.swift in Sources */,
+				885CDB1D2D235C180005A5B0 /* NegativeQuizView.swift in Sources */,
+				885CDB1B2D235C090005A5B0 /* PositiveQuizView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		885CDAF32D227E870005A5B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				885CDAFC2D227E870005A5B0 /* GaiaIntelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		885CDAFD2D227E870005A5B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				885CDB062D227E870005A5B0 /* GaiaIntelUITests.swift in Sources */,
+				885CDB082D227E870005A5B0 /* GaiaIntelUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		885CDAF92D227E870005A5B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 885CDAE62D227E850005A5B0 /* GaiaIntel */;
+			targetProxy = 885CDAF82D227E870005A5B0 /* PBXContainerItemProxy */;
+		};
+		885CDB032D227E870005A5B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 885CDAE62D227E850005A5B0 /* GaiaIntel */;
+			targetProxy = 885CDB022D227E870005A5B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		885CDB092D227E870005A5B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		885CDB0A2D227E870005A5B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		885CDB0C2D227E870005A5B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GaiaIntel/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kwk.GaiaIntel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		885CDB0D2D227E870005A5B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GaiaIntel/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kwk.GaiaIntel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		885CDB0F2D227E870005A5B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kwk.GaiaIntelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GaiaIntel.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GaiaIntel";
+			};
+			name = Debug;
+		};
+		885CDB102D227E870005A5B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kwk.GaiaIntelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GaiaIntel.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GaiaIntel";
+			};
+			name = Release;
+		};
+		885CDB122D227E870005A5B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kwk.GaiaIntelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GaiaIntel;
+			};
+			name = Debug;
+		};
+		885CDB132D227E870005A5B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kwk.GaiaIntelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GaiaIntel;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		885CDAE22D227E850005A5B0 /* Build configuration list for PBXProject "GaiaIntel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				885CDB092D227E870005A5B0 /* Debug */,
+				885CDB0A2D227E870005A5B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		885CDB0B2D227E870005A5B0 /* Build configuration list for PBXNativeTarget "GaiaIntel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				885CDB0C2D227E870005A5B0 /* Debug */,
+				885CDB0D2D227E870005A5B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		885CDB0E2D227E870005A5B0 /* Build configuration list for PBXNativeTarget "GaiaIntelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				885CDB0F2D227E870005A5B0 /* Debug */,
+				885CDB102D227E870005A5B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		885CDB112D227E870005A5B0 /* Build configuration list for PBXNativeTarget "GaiaIntelUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				885CDB122D227E870005A5B0 /* Debug */,
+				885CDB132D227E870005A5B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 885CDADF2D227E850005A5B0 /* Project object */;
+}
