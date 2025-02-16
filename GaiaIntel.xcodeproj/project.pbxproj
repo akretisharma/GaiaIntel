@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		883501D02D629947001D1EA6 /* ChatbotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883501CF2D629947001D1EA6 /* ChatbotView.swift */; };
 		885CDAEB2D227E850005A5B0 /* GaiaIntelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885CDAEA2D227E850005A5B0 /* GaiaIntelApp.swift */; };
 		885CDAED2D227E850005A5B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885CDAEC2D227E850005A5B0 /* ContentView.swift */; };
 		885CDAEF2D227E870005A5B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 885CDAEE2D227E870005A5B0 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		883501CF2D629947001D1EA6 /* ChatbotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotView.swift; sourceTree = "<group>"; };
 		885CDAE72D227E850005A5B0 /* GaiaIntel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GaiaIntel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		885CDAEA2D227E850005A5B0 /* GaiaIntelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaiaIntelApp.swift; sourceTree = "<group>"; };
 		885CDAEC2D227E850005A5B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				885CDB1C2D235C180005A5B0 /* NegativeQuizView.swift */,
 				885CDAEE2D227E870005A5B0 /* Assets.xcassets */,
 				885CDAF02D227E870005A5B0 /* Preview Content */,
+				883501CF2D629947001D1EA6 /* ChatbotView.swift */,
 			);
 			path = GaiaIntel;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				885CDB192D2359F90005A5B0 /* NegativeEffectsView.swift in Sources */,
 				885CDB172D2359EA0005A5B0 /* PositiveEffectsView.swift in Sources */,
 				885CDB1D2D235C180005A5B0 /* NegativeQuizView.swift in Sources */,
+				883501D02D629947001D1EA6 /* ChatbotView.swift in Sources */,
 				885CDB1B2D235C090005A5B0 /* PositiveQuizView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
