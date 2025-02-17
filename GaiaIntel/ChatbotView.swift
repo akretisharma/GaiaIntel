@@ -45,10 +45,25 @@ struct ChatbotView: View {
                 }
             }
             .padding()
+            
+            if isLoading {
+                HStack {
+                    Spacer()
+                    Text("Bot is thinking...")
+                        .italic()
+                        .foregroundColor(Color.brown.opacity(0.5))
+                        .padding()
+                    Spacer()
+                }
+            }
+            
             Spacer()
             HStack {
                 TextField("Ask about AI & climate change...", text: $userInput)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                    .background(Color.brown.opacity(0.1))
+                    .cornerRadius(8)
+                    .padding(.bottom, 2)
                     
 
                 Button(action: sendMessage) {
@@ -77,6 +92,9 @@ struct ChatbotView: View {
         isLoading = true
 
         let geminiAPIKey = ""
+        
+        /*AIzaSyAnDd6MEZev4z9cbu6ni8-ixLOvYdy11tg*/
+        
         let url = URL(string: "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=\(geminiAPIKey)")!
 
         let requestBody: [String: Any] = [
